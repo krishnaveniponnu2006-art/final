@@ -1,13 +1,12 @@
 const mongoose = require("mongoose");
 
-const MONGO_URI =
-  "mongodb+srv://krishnaveniponnu2006_db_user:veni123@cluster0.s0rdxvg.mongodb.net/blogapp?retryWrites=true&w=majority&appName=Cluster0";
-
 mongoose
-  .connect(MONGO_URI)
+  .connect(
+    "mongodb+srv://krishnaveniponnu2006_db_user:veni123@cluster0.s0rdxvg.mongodb.net/blogapp?retryWrites=true&w=majority&appName=Cluster0"
+  )
   .then(() => {
-    console.log("Connected to DB");
+    console.log("Connected to MongoDB Atlas");
   })
   .catch((error) => {
-    console.log("DB connection error:", error);
+    console.log(error);
   });
